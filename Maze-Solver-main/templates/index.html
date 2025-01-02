@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="/static_files/css/style.css">
+    <script src="/static_files/js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Maze Solver</h1>
+        <form id="mazeForm">
+            <label for="mazeImage">Upload Maze Image:</label>
+            <input type="file" id="mazeImage" name="mazeImage" accept="image/*" required>
+            <div id="imagePreviewContainer">
+                <h3>Uploaded Maze Preview:</h3>
+                <img id="imagePreview" alt="Uploaded Maze Preview">
+            </div>
+            <button type="submit">Solve Maze</button>
+        </form>
+
+        <div id="output">
+            <h2>Solution:</h2>
+            <p id="status">Upload a maze and start the process!</p>
+            <div id="mazeGifContainer">
+                <img id="mazeGif" alt="Maze Solution Animation">
+                <a id="downloadGifButton" href="#" download="maze-animation.gif" class="download-button">Download GIF</a>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>

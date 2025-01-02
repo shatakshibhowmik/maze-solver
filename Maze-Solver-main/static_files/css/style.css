@@ -1,0 +1,228 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Lato', sans-serif;
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364); /* Deep gradient for depth */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #8df3b4; /* Vibrant green for creativity */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Subheader */
+p {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    background: linear-gradient(to right, #08f1de, hsl(172, 98%, 21%)); /* Blue-green gradient */
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #298288, #013a44); /* Reverse gradient */
+}
+
+/* Input Styling */
+input[type="file"], input[type="text"], input[type="number"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 80%;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: #b7f5ff;
+    outline: none;
+    box-shadow: 0 0 8px #b7f5ff;
+}
+
+/* Output Section */
+#output {
+    margin-top: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #a9f8ee;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Maze GIF Styling */
+#mazeGifContainer {
+    max-height: 400px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 20px auto;
+    border: 2px solid #0f766e;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#mazeGif {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image Preview Section */
+#imagePreviewContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+#imagePreviewContainer h3 {
+    font-size: 1.5rem;
+    color: #a9f8ee;
+    margin-bottom: 10px;
+}
+
+#imagePreview {
+    max-width: 100%;
+    max-height: 300px;
+    overflow-y: auto; /* Enable vertical scrolling for large images */
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+}
+
+/* Web-Like Background */
+.container:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, transparent, rgba(255, 255, 255, 0.1));
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #8df3b4; /* Match the theme */
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #4dbb94; /* Darker on hover */
+}
+#downloadGifButton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #08f1de, hsl(172, 98%, 21%)); /* Blue-green gradient */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#downloadGifButton:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #298288, #013a44); /* Reverse gradient */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #imagePreview {
+        max-width: 100%;
+        max-height: 250px;
+    }
+}
